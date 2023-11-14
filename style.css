@@ -1,0 +1,162 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url(Raleway-VariableFont_wght.ttf);
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 195px;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.header-container a {
+    margin: 0 25px;
+    font-family: 'raleway';
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+header {
+    height: 111px;
+    background-color: #BF8C60;
+    position: fixed;
+    width: 100%;
+}
+
+.fa-solid {
+    font-size: 45px;
+    padding-left: 15px;
+}
+
+#banner {
+    background-color: #592816;
+    height: 759px;
+}
+
+.banner {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 119px 103px;
+}
+
+.gif img {
+    width: 383px;
+    border-radius: 20px;
+}
+
+.text {
+    width: 381px;
+    text-align: justify;
+    font-family: 'raleway';
+}
+
+.text h3 {
+    color: #F2B90F;
+    font-size: 31px;
+}
+
+.text span {
+    color: #fdd1a5;
+    font-size: 36px;
+}
+
+.text p {
+    font-size: 18px;
+}
+
+.ofertas {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 157px;
+}
+
+.cubo {
+    border-radius: 8px;
+    border: 2px #f8dfc9 solid;
+    padding: 30px 49px;
+    background-color: #f2dbd1;
+    font-family: 'raleway';
+    color: #592816;
+    box-shadow: 5px 5px #592816;
+    cursor: pointer;
+    position: relative;
+    width: 132px;
+}
+
+
+
+.cubo img {
+    width: 133px;
+    border-radius: 250px;
+}
+
+.cubo h2 {
+    font-size: 20px;
+    padding-top: 4%;
+}
+
+#ofertas {
+    position: relative;
+    bottom: 175px;
+}
+
+.titulo {
+    display: flex;
+}
+
+.titulo h2 {
+    font-family: 'raleway';
+    margin: 0 217px;
+    padding: 0px 0px 24px;
+    font-size: 31px;
+    color: #f1e7db;
+}
+
+/* .linha{
+    background-color: #f1e7db;
+    height: 2px;
+    width: 899px;         
+    position: relative;
+    top: 24px;
+    right: 161px;
+    border-radius: 20px;
+ } */
+
+
+ /* Adicione estilos conforme necessário */
+ .linha {
+     height: 10px;
+     background-color: #ccc;
+     margin-bottom: 20px;
+     overflow: hidden;
+ }
+
+ 
+main {
+    height: 993px;
+}
+
+.footer {
+    background-color: #BF8C60;
+    color: #fff;
+    font-weight: 500;
+    display: grid;
+    font-family: 'raleway';
+    justify-items: center;
+    height: 77px;
+    font-size: 18px;
+    align-items: center;
+}
