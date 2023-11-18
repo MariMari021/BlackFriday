@@ -4,20 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BookStore</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a2288264db.js" crossorigin="anonymous"></script>
-    <style>
-.progresso {
-    height: 100%;
-    background-color: #4CAF50;
-    width: 0;
-    transition: width 1s ease-in-out;
-    border: 1px solid #4CAF50;
-    max-width: 899px !important; /* Adicione !important para garantir prioridade */
-}
-
-    </style>
 </head>
 
 <body>
@@ -28,8 +18,6 @@
             <nav>
                 <a href="index.html#banner">Home</a>
                 <a href="index.html#ofertas">Ofertas</a>
-                <!-- <a href="#">Destaques</a>
-                <a href="#">Sobre nós</a> -->
             </nav>
         </div>
     </header>
@@ -38,9 +26,10 @@
             <div class="banner">
                 <div class="text">
                     <h3>CYBER <span>MONDAY</span></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo autem nesciunt quibusdam voluptas
-                        perferendis mollitia fuga quam quod, nostrum, corporis omnis. Labore nam quis pariatur eligendi
-                        ducimus quam voluptates numquam.</p>
+                    <p>Aproveite descontos exclusivos na Cyber Monday para renovar sua estante com livros envolventes.
+                        Celebre a paixão pela leitura com ofertas especiais, incluindo frete grátis e brindes. Enriqueça
+                        sua biblioteca durante esta oportunidade única.
+                    </p>
                 </div>
                 <div class="gif">
                     <img src="img/Childrens-books-2.gif" alt="">
@@ -50,30 +39,32 @@
         <section id="ofertas">
             <div class="titulo">
                 <h2>OFERTAS</h2>
-                <div class="linha">
-                    <div class="progresso" id="progresso"></div>
+
+                <div id="barraProgresso">
+                    <div id="progresso">
+                        <div id="contador">
+                            0
+                        </div>
+                    </div>
                 </div>
+            </div>
             </div>
             <div class="ofertas">
                 <div class="cubo">
                     <img src="img/cubo1.webp" alt="">
-                    <h2>Lorem ipsum</h2>
-                    <h4>R$00,00</h4>
+                    <h2>Suporte</h2>
                 </div>
                 <div class="cubo">
-                    <img src="img/cubo1.webp" alt="">
-                    <h2>Lorem ipsum</h2>
-                    <h4>R$00,00</h4>
+                    <img src="img/marcador.jpg" alt="">
+                    <h2>Marcador</h2>
                 </div>
                 <div class="cubo">
-                    <img src="img/cubo1.webp" alt="">
-                    <h2>Lorem ipsum</h2>
-                    <h4>R$00,00</h4>
+                    <img src="img/chaveiro.webp" alt="">
+                    <h2>Chaveiro</h2>
                 </div>
                 <div class="cubo">
-                    <img src="img/cubo1.webp" alt="">
-                    <h2>Lorem ipsum</h2>
-                    <h4>R$00,00</h4>
+                    <img src="img/capa.jpg" alt="">
+                    <h2>Capa Kindle</h2>
                 </div>
 
             </div>
@@ -85,42 +76,9 @@
             <p>@Copyright of BookStore</p>
         </div>
     </footer>
-    <script>
-        // Função para formatar o tempo restante
-        function formatarTempoRestante(tempoRestante) {
-            const dias = Math.floor(tempoRestante / (1000 * 60 * 60 * 24));
-            const horas = Math.floor((tempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutos = Math.floor((tempoRestante % (1000 * 60 * 60)) / (1000 * 60));
-            const segundos = Math.floor((tempoRestante % (1000 * 60)) / 1000);
-    
-            return `${dias}d ${horas}h ${minutos}m ${segundos}s`;
-        }
-    
-        // Função para atualizar a contagem regressiva e a barra de progresso
-        function atualizarContagemRegressiva() {
-            const dataAlvo = new Date("2023-11-27T00:00:00Z").getTime();
-            const agora = new Date().getTime();
-            const diferenca = dataAlvo - agora;
-    
-            const progresso = document.getElementById("progresso");
-            const tempoRestante = formatarTempoRestante(diferenca);
-            const percentualCompleto = ((agora - dataAlvo) / diferenca) * 100;
-    
-            // Atualizar elementos na página
-            progresso.style.width = percentualCompleto + "%";
-            progresso.innerHTML = tempoRestante;
-    
-            // Adicione outros elementos HTML conforme necessário
-        }
-    
-        // Atualizar a cada segundo
-        setInterval(atualizarContagemRegressiva, 1000);
-    
-        // Chamar a função uma vez ao carregar a página
-        atualizarContagemRegressiva();
-    </script>
-    
-    
+
+    <script src="main.js"></script>
+
 </body>
 
 </html>
